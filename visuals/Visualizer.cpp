@@ -5,7 +5,7 @@
 //stack visualization
 void Visualizer::DrawStack(const Stack &stackDS) {
     int startX = 600; //thje starting x position
-    int startY = 600; //the starting y position
+    int startY = 620; //the starting y position
     int barHeight = 40; //height of each stack
 
     //loop through each elements
@@ -18,8 +18,8 @@ void Visualizer::DrawStack(const Stack &stackDS) {
 
 //queue visualization
 void Visualizer::DrawQueue(const QueueDS &queueDS) {
-    int startX = 300; //the starting x position
-    int startY = 500; //the starting y position
+    int startX = 250; //the starting x position
+    int startY = 300; //the starting y position
     int barSize = 50; //the size of each square element
     int spacing = 10; //gap between elements
 
@@ -38,8 +38,8 @@ void Visualizer::DrawQueue(const QueueDS &queueDS) {
 //linked list visualization
 void Visualizer::DrawLinkedList(Node* head) {
     Node* curr = head; //starts at head of list
-    int startX = 300; //the starting x position
-    int startY = 400; //the starting y position
+    int startX = 250; //the starting x position
+    int startY = 300; //the starting y position
     int boxWidth = 50; //the width of each node
 
     //traversing linked list
