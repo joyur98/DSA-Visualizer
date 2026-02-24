@@ -16,33 +16,6 @@ It visually demonstrates:
 The purpose of this project is to make learning DSA more intuitive, visual, and interactive.
 
 ---
-
-## Folder Structure
-DSA-VISUALIZER/
-│
-├── structures/
-│ ├── Array.h
-│ ├── Stack.h
-│ ├── Queue.h
-│ ├── LinkedList.h
-│ └── BinaryTree.h
-│
-├── ui/
-│ ├── UI.h
-│ └── UI.cpp
-│
-├── visuals/
-│ ├── Animation.h
-│ ├── Visualizer.h
-│ └── Visualizer.cpp
-│
-├── main.cpp
-├── README.md
-└── DSAVisualizer.exe (generated after build)
-
-
----
-
 ## Build Instructions
 
 ### Requirements
@@ -64,72 +37,63 @@ If successful, it generates
 Run it launch the applicaiton
 
 ---
-## 🎮 Features
+##  Features
 
-### ✔ Animated Insertions  
+###  Animated Insertions  
 Every time you press **Insert Random**, a random value is generated and animated into:
 
-- Array
 - Stack
 - Queue
 - Linked List
 - Binary Search Tree
 
-### ✔ Smooth Sorting  
+###  Smooth Sorting  
 The **Sort** button sorts the selected data structure using:
 
 - `std::sort()` for Array, Stack, Queue, Linked List  
 - BST is inherently sorted  
 
-### ✔ Clean UI  
+###  Clean UI  
 - Sidebar for selecting the structure  
 - Buttons for Insert, Remove, Sort  
 - Real-time animated drawing  
 
 ---
 
-## 📘 Data Structures Implemented
+##  Data Structures Implemented
 
-### **Array**
-- Push back  
-- Remove last  
-- Smooth element movement animation  
-
-### **Stack**
+### Stack
 - Push & Pop  
-- Animated element stacking  
 
-### **Queue**
+### Queue
 - Enqueue & Dequeue  
-- Elements slide forward smoothly  
 
-### **Linked List**
+### Linked List
 - Insert at tail  
 - Delete last  
-- Nodes move smoothly across screen  
 
-### **Binary Tree (BST)**
+### Binary Tree (BST)
 - Auto-positioned nodes  
 - Smooth transitions using `AnimatedPos`  
 - Lines drawn between child/parent  
 
 ---
 
-## 🎨 Tech Used
+##  Tech Used
 
-- **C++**
-- **raylib** (graphics)
-- **std::vector**, **std::queue**
+- C++
+- raylib (graphics)
+- std::vector, std::queue
 - Custom animation system (`AnimatedPos`)
 
 ---
 
-## 📜 License
+##  License
 This project is open-source. You may modify and use it freely.
 
 ---
 
-## 👤 Author
+##  Author
 Ruyoj KC  
 DSA Visualizer Project
 
