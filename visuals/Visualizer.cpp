@@ -70,14 +70,14 @@ void Visualizer::DrawTree(TreeNode* root) {
     std::queue<TreeNode*> q;
     q.push(root); //start with root node
 
-    //goes thru nodes level by level
+    //goes thru node level by level
     while (!q.empty()) {
-        TreeNode* n = q.front(); q.pop(); //get next node
+        TreeNode* n = q.front(); q.pop(); //gets the next node
 
-        //updates nodes position with smooth animation
+        // Smooth animation
         n->pos.Update();
 
-        //draws connections to children first
+        //draws connection the child node
         if (n->left) {
             DrawLineEx(n->pos.current, n->left->pos.current, 4, DARKBLUE); //line to left child
             q.push(n->left); //add left child to queue
@@ -89,6 +89,6 @@ void Visualizer::DrawTree(TreeNode* root) {
 
         // Draw node as a circle
         DrawCircle(n->pos.current.x, n->pos.current.y, 28, BLUE);
-        DrawText(TextFormat("%d", n->val),n->pos.current.x - 7, n->pos.current.y - 8, 20, WHITE); //draw value in the node
+        DrawText(TextFormat("%d", n->val),n->pos.current.x - 7, n->pos.current.y - 8, 20, WHITE); //draws the value
     }
 }
