@@ -1,28 +1,16 @@
-#pragma once // Prevents multiple inclusions of this header file
+#pragma once // makes it so that this header file is only included once
 
-#include "raylib.h"                 // raylib header file for graphic functions
-#include "structures/Stack.h"       // Stack data structure header (for stack visualization)
-#include "structures/Queue.h"       // Queue data structure header (for queue visualization)
-#include "structures/LinkedList.h"  // Linked List data structure header (for list visualization)
-#include "structures/BinaryTree.h"  // Binary Tree data structure header (for tree visualization)
+#include "raylib.h" //raylib header file for graphic functions
+#include "structures/Stack.h" //stack data structure header
+#include "structures/Queue.h" //queue data structure header
+#include "structures/LinkedList.h" //linked List data structure header
+#include "structures/BinaryTree.h" //binary Tree data structure header
 
+//functions to draw and visualzie the different data strucutres
 class Visualizer {
 public:
-    // Static methods - can be called without creating a Visualizer object
-    // All methods take const references/pointers (read-only access)
-    
-    static void DrawStack(const Stack &s);           // Draws a visual representation of a stack
-                                                     // Shows elements stacked vertically
-    
-    static void DrawQueue(const QueueDS &q);         // Draws a visual representation of a queue
-                                                     // Shows elements in FIFO order
-    
-    static void DrawLinkedList(Node* head);          // Draws a visual representation of a linked list
-                                                     // Shows nodes connected by arrows
-    
-    static void DrawTree(TreeNode* root);            // Draws a visual representation of a binary tree
-                                                     // Shows nodes with left/right connections
+    static void DrawStack(const Stack &s); //draws a visual representation of a stack
+    static void DrawQueue(const QueueDS &q); //draws a visual representation of a queue
+    static void DrawLinkedList(Node* head); //draws a visual representation of a linked list
+    static void DrawTree(TreeNode* root); //draws a visual representation of a binary tree
 };
-
-// This class centralizes all visualization logic for different data structures
-// Static methods make it easy to use: Visualizer::DrawStack(myStack);
