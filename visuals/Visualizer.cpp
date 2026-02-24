@@ -66,27 +66,29 @@ void Visualizer::DrawTree(TreeNode* root) {
         return;
     }
 
+    //uses queue for BFS traversal
     std::queue<TreeNode*> q;
-    q.push(root);
+    q.push(root); //start with root node
 
+    //goes thru node level by level
     while (!q.empty()) {
-        TreeNode* n = q.front(); q.pop();
+        TreeNode* n = q.front(); q.pop(); //gets the next node
 
         // Smooth animation
         n->pos.Update();
 
+        //draws connection the child node
         if (n->left) {
-            DrawLineEx(n->pos.current, n->left->pos.current, 4, DARKBLUE);
-            q.push(n->left);
+            DrawLineEx(n->pos.current, n->left->pos.current, 4, DARKBLUE); //line to left child
+            q.push(n->left); //add left child to queue
         }
         if (n->right) {
-            DrawLineEx(n->pos.current, n->right->pos.current, 4, DARKBLUE);
-            q.push(n->right);
+            DrawLineEx(n->pos.current, n->right->pos.current, 4, DARKBLUE); //line to right child
+            q.push(n->right); //add right child to queue
         }
 
-        // Draw node
+        // Draw node as a circle
         DrawCircle(n->pos.current.x, n->pos.current.y, 28, BLUE);
-        DrawText(TextFormat("%d", n->val),
-                 n->pos.current.x - 7, n->pos.current.y - 8, 20, WHITE);
+        DrawText(TextFormat("%d", n->val),n->pos.current.x - 7, n->pos.current.y - 8, 20, WHITE); //draws the value
     }
 }
